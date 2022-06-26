@@ -1,0 +1,29 @@
+main()
+{
+ /* Déclarations */
+ int U[50], V[50]; /* tableaux donnés */
+ int N;     /* dimension        */
+ int I;     /* indice courant   */
+ long PS;   /* produit scalaire */
+ /* Saisie des données */
+ printf("Dimension des tableaux (max.50) : ");
+ scanf("%d", &N );
+ printf("** Premier tableau **\n");
+ for (I=0; I<N; I++)
+    {
+     printf("Elément %d : ", I);
+     scanf("%d", &U[I]);
+    }
+ printf("** Deuxième tableau **\n");
+ for (I=0; I<N; I++)
+    {
+     printf("Elément %d : ", I);
+     scanf("%d", &V[I]);
+    }
+ /* Calcul du produit scalaire */
+ for (PS=0, I=0; I<N; I++)
+      PS += (long)U[I]*V[I];
+  /* Edition du résultat */
+ printf("Produit scalaire : %ld\n", PS);
+ return 0;
+}
